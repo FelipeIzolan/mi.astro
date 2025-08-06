@@ -1,0 +1,75 @@
+import Paper from "@/layouts/Paper.astro";
+
+import { Image } from "astro:assets";
+import Overview from "@images/overview.jpg";
+
+<Paper
+  title={'Overview'}
+  description={'aaa'}
+  author={'Felipe Izolan'}
+  katex={true}
+>
+<Image src={Overview} alt="AstroJS" />
+
+mi.astro is a template designed for content-driven websites and let you easily create content while keeping your site fast and efficient.
+
+---
+
+## Content Features
+
+- [mdx](https://mdxjs.com/) - Markdown + JSX
+- [gfm](https://github.github.com/gfm/) - Github Flavored Markdown
+- [shiki](https://shiki.matsu.io/) - Syntax Highlighter
+- [katex](https://katex.org/) - Math Typesetting
+- [emoji](https://github.com/remarkjs/remark-gemoji) - Text to UTF-8 emoji
+
+---
+
+### Markdown
+
+
+
+### Syntax Highlight
+
+```js
+const fibb = (prev, curr, times) => {
+  if (times == 0)
+    return curr;
+  return fibb(curr, curr + prev, times - 1);
+}
+console.log(fibb(0, 1, 9));
+```
+
+Syntax Highlighting is handled by [Shiki](https://shiki.matsu.io/). Colors are applied through inline CSS, making things simpler.
+
+### Math Typesetting
+
+$
+x = \frac{10!}{6!}
+\int x^2 dx
+$
+
+Math typesetting is handled by [KaTeX](https://katex.org/). 
+```jsx
+import Paper from "@/layouts/Paper.astro";
+<Paper
+  katex={true}
+  title={''}
+  description={''} 
+>
+ ...
+</Paper>
+```
+To enable katex styling, make sure to pass the `katex={true}` prop to layout component.
+
+### Emojis
+
+:smile: :new_moon: :heart_eyes:
+
+```
+:smile: :new_moon: :heart_eyes:
+```
+
+You can add emojis to your content using shortcodes, which are processed by [remark-gemoji](https://github.com/remarkjs/remark-gemoji).
+
+</Paper>

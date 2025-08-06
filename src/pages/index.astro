@@ -1,0 +1,19 @@
+---
+import Directory from "../layouts/Directory.astro"
+
+import { Image } from "astro:assets";
+import Banner from "@images/banner.jpg";
+---
+<Directory
+  title={'Home'}
+  description={'mi.astro template'}
+  inodes={[
+    { type: "file", text: "Overview" },
+  ]}
+>
+<Image src={Banner} alt='banner'/>
+<h2>Hello, World!</h2>
+<p>
+<a href="https://github.com/felipeizolan/mi.astro">mi.astro</a> is a minimal, lightweight Astro.js template designed for fast, content-focused websites.
+</p>
+</Directory>
