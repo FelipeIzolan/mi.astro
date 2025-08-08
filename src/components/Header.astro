@@ -11,14 +11,14 @@ var cc = '';
 ---
 <header>
   <nav>
-    <a href='/' aria-label="Link to Home"><Folder /></a>
+    <a href='/' aria-label="Link to: Home"><Folder /></a>
     {
     pathname
     .split('/')
     .slice(1)
     .map(p => {
       let href = cc + '/' + p;
-      let label = 'Link to ' + unslugify(p);
+      let label = 'Link to: ' + unslugify(p);
       cc += href;
       return (<>/</><a {href} aria-label={label}>{p}</a>)
     })

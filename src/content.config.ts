@@ -9,7 +9,8 @@ const blog = defineCollection({
   schema: z.object({
     date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/).optional(),
     title: z.string(),
-    author: z.string().optional()
+    author: z.string().optional(),
+    katex: z.boolean().optional()
   })
 });
 
