@@ -1,5 +1,5 @@
 ---
-import Directory from "../layouts/Directory.astro"
+import Directory from "@layouts/Directory.astro"
 
 import { Image } from "astro:assets";
 import Banner from "@images/banner.jpg";
@@ -8,7 +8,8 @@ import Banner from "@images/banner.jpg";
   title={'Home'}
   description={'mi.astro template'}
   inodes={[
-    { type: "file", text: "Overview" },
+    { type: "file", text: "Overview" },  
+    { type: "folder", text: "Blog" },
   ]}
 >
 <Image src={Banner} alt='banner'/>

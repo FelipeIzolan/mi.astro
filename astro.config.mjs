@@ -11,29 +11,31 @@ import rehypeKatex from 'rehype-katex';
 
 export default defineConfig({
   site: 'https://your-site.com/',
-  integrations: [
-    mdx({
-      shikiConfig: {
-        theme: 'github-dark',
-        transformers: [
-          {
-            pre(node) {
-              node.properties.style = "background-color:#212121;color:#e1e4e8;overflow-x:auto;"
-            }
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      transformers: [
+        {
+          pre(node) {
+            node.properties.style = "background-color:#212121;color:#e1e4e8;overflow-x:auto;"
           }
-        ]
-      },
-      rehypePlugins: [rehypeKatex],
-      remarkPlugins: [remarkMath, remarkGemoji],
-      gfm: true
-    }),
+        }
+      ]
+    },
+    rehypePlugins: [rehypeKatex],
+    remarkPlugins: [remarkMath, remarkGemoji],
+    gfm: true
+  },
+  integrations: [
+    mdx(),
     sitemap()
   ],
   vite: {
     resolve: {
       alias: {
         '@': resolve(import.meta.dirname, './src'),
-        '@images': resolve(import.meta.dirname, './src/assets/images/'),
+        '@layouts': resolve(import.meta.dirname, './src/layouts'),
+        '@images': resolve(import.meta.dirname, './src/assets/images')
       }
     },
   }

@@ -15,14 +15,14 @@ import Folder from "@/assets/folder.svg"
   }
   <main>
     {
-    Astro.props.inodes?.map(({ text, type }) => {
+    Astro.props.inodes?.map(({ text, type, slug }) => {
       let label = 'Link to ' + text;
       let Icon = type == 'file' ? File : Folder;
       return (
         <a 
           class="inode"
           aria-label={label} 
-          href={join(Astro.url.pathname, slugify(text, { lower: true }))}
+          href={join(Astro.url.pathname, slug ?? slugify(text, { lower: true }))}
         >
         <Icon/>{text}
         </a>

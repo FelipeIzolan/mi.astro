@@ -1,0 +1,7 @@
+---
+title: Post example 1
+date: '2025-09-15'
+author: John Doe
+---
+
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget nulla nibh. Sed rhoncus libero nec mattis fermentum. Proin imperdiet a lacus vel auctor. Fusce nisl magna, pharetra nec volutpat sed, tempor sed ex. Nulla fermentum nisl sit amet lectus vulputate, non consequat neque gravida. Etiam urna sapien, aliquet a tincidunt ultrices, vehicula sed nibh. Morbi eu est eget neque eleifend iaculis eu et elit. Donec vitae quam tortor. Donec ac elementum elit, ut tincidunt mi. Donec quis venenatis turpis, ac finibus tortor. Nam ornare rutrum facilisis. Pellentesque volutpat, odio eu luctus pellentesque, ipsum ante tempus massa, eu sagittis sapien erat varius sem. 

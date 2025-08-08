@@ -25,4 +25,7 @@ var cc = '';
     }
   </nav>
   <h1 style="margin:0">{title}</h1>
+  {author && <span>{author}</span>}
+  {author && date && <>|</>}
+  {date && <span>{date}</span>}
 </header>

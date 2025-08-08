@@ -1,0 +1,14 @@
+---
+import Directory from "@layouts/Directory.astro"
+import { getCollection } from "astro:content";
+
+var posts = await getCollection('blog');
+posts = posts.sort((a, b) => new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf());
+posts = posts.map(post => ({ text: post.data.title, type: 'file', slug: post.id }));
+---
+<Directory
+  title={'Blog'}
+  description={'mi.astro blog page'}
+  inodes={posts}
+>
+</Directory>
