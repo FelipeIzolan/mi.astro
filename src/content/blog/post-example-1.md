@@ -1,5 +1,6 @@
 ---
 title: Post Example 1
+description: Post Example 1 description
 date: '2025-09-15'
 author: John Doe
 katex: true
